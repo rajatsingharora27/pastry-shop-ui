@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --iconicGreen: rgba(155, 207, 155, 0.902);
+    --website-font:'Josefin Sans', sans-serif;
+}
+
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
