@@ -1,4 +1,5 @@
 const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   mode: "development",
@@ -24,7 +25,7 @@ module.exports = {
 
     liveReload: true,
 
-    // historyApiFallback: true,
+    historyApiFallback: true,
   },
 
   resolve: {
@@ -60,4 +61,11 @@ module.exports = {
       },
     ],
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: "./public/index.html",
+      filename: "index.html",
+      inject: "body",
+    }),
+  ],
 };

@@ -4,14 +4,26 @@ import { Toolbar, Typography, Box, Drawer } from "@mui/material";
 import DehazeIcon from "@mui/icons-material/Dehaze";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import SearchIcon from "@mui/icons-material/Search";
+import { useNavigate } from "react-router-dom";
 
 export default function Navbar() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const navigate = useNavigate();
+
+  const redirectToHome = () => {
+    navigate("/");
+  };
+
   return (
     <>
-      <AppBar className="flex justify-between sticky top-0 bg-[var(--iconicGreen)]  shadow-xl h-[25%] py-5 px-6 xl:py-4 xl:px-14 2xl:px-28  ">
+      <AppBar className="flex justify-between bg-opacity-80 bg-clip-padding backdrop-blur-sm sticky top-0 bg-[var(--iconicGreen)]  shadow-xl h-[25%] py-5 px-6 xl:py-4 xl:px-14 2xl:px-28  ">
         <Toolbar className="flex justify-between">
-          <h1 className="text-white font-[var(--website-font)] text-3xl">
+          <h1
+            className="text-white font-[var(--website-font)] text-3xl cursor-pointer"
+            onClick={() => {
+              navigate("/");
+            }}
+          >
             Pastry Shop
           </h1>
 

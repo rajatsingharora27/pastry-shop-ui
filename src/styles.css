@@ -8,6 +8,9 @@
     --website-font:'Josefin Sans', sans-serif;
 }
 
+::-webkit-scrollbar{
+    display: none
+}
 
 
 @tailwind base;

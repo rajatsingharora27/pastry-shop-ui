@@ -5,9 +5,11 @@ module.exports = {
   // },
   // important: "#root",
   content: ["./src/**/*.{html,js,ts,tsx,jsx}"],
-  // theme: {
-  //   extend: {},
-  // },
+  theme: {
+    extend: {
+      2: "0 0 25%",
+    },
+  },
   // plugins: [],
   // purge: ["./src/**/*.js"],
 };

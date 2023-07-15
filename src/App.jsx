@@ -1,23 +1,23 @@
 import React from "react";
 import Navbar from "./components/Navbar/Navbar";
 import MiddleSection from "./components/MiddleSection/MiddleSection";
+import HomePageCollection from "./components/HomePageCollections/HomePageCollection";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import About from "./pages/About/About";
+import ProductPage from "./pages/Product/ProductPage";
 
 const App = () => {
   return (
     <>
-      <Navbar />
-      <MiddleSection />
-      <div className="flex flex-col justify-center items-center my-3 p-14 gap-y-3">
-        <h2 className="font-[var(--website-font)] text-center  ">
-          Featured Collections
-        </h2>
-        <h3 className="font-[var(--website-font)] text-center">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
-          reprehenderit possimus optio, libero non earum? Libero animi tenetur
-          exercitationem nam nemo esse cupiditate harum, ipsam perspiciatis
-          consequuntur ab nesciunt dignissimos.
-        </h3>
-      </div>
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<HomePageCollection />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/product/:productId" element={<ProductPage />} />
+          <Route path="*" element={<h1>404 Error</h1>} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 };
