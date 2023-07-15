@@ -7,15 +7,17 @@ module.exports = {
   entry: "./index.jsx",
 
   output: {
-    path: path.resolve(__dirname, "public"),
+    // path: path.resolve(__dirname, "public"),
 
     filename: "main.js",
+
+    publicPath: "/",
   },
 
   target: "web",
 
   devServer: {
-    port: "3001",
+    port: "3000",
 
     static: ["./public"],
 

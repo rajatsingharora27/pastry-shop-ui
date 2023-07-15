@@ -14,7 +14,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<HomePageCollection />} />
           <Route path="/about" element={<About />} />
-          <Route path="/product/:productId" element={<ProductPage />} />
+          <Route path="/product/:id" element={<ProductPage />} />
           <Route path="*" element={<h1>404 Error</h1>} />
         </Routes>
       </BrowserRouter>
