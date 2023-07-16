@@ -3,9 +3,6 @@ import * as React from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function ProductCard({ productProps }) {
-  //   {
-  //     console.log(props.productProps);
-  //   }
   const navigate = useNavigate();
 
   const openProductPage = () => {
@@ -25,7 +22,10 @@ export default function ProductCard({ productProps }) {
         </div>
 
         <div className="bottom flex flex-col justify-center items-start p-3 bg-">
-          <div className="title font-semibold text-xs my-1">{`${productProps.name}`}</div>
+          <div
+            className="title font-semibold text-xs my-1 cursor-pointer "
+            onClick={openProductPage}
+          >{`${productProps.name}`}</div>
           {/* <div className="category text-xs font-light my-1">
             5.4 cm (6.1-inch) display1
           </div> */}

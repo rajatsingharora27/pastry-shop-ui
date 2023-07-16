@@ -9,7 +9,7 @@ const MiddleSection = () => {
     and the content through api
     */
     <div
-      className="bg-[url('https://cdn.shopify.com/s/files/1/0580/2668/8535/files/banner.jpg?v=1679214987')]
+      className="bg-[url('//tuileriespatisserie.in/cdn/shop/files/Banner-Weasbsite-20.jpg?v=1657226032')]
      bg-cover bg-center h-96 "
     >
       <Card

@@ -44,7 +44,6 @@ export const daySpecialList = [
     imageUrl:
       "https://tuileriespatisserie.in/cdn/shop/products/MANGOENTLIGHTHALF.jpg?v=1678882091",
   },
-
   {
     id: 6,
     name: "Summer Charolte (1100 - 1500 gm)",
