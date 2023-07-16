@@ -51,7 +51,7 @@ const ProductPage = () => {
           />
           {/* ml-[35px] mx-auto md:w-[350px] md:ml-[35px] */}
 
-          <div className="flex  gap-x-3 ">
+          <div className="flex gap-x-3 ">
             <img
               src="https://tuileriespatisserie.in/cdn/shop/products/SAH_4282_x432@2x.jpg?v=1678965799"
               alt=""
