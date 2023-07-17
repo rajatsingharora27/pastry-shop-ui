@@ -19,7 +19,7 @@ export const daySpecialList = [
   },
   {
     id: 3,
-    name: "hello",
+    name: "Summer Charolte (1100 - 1500 gm)",
     price: 2300,
     isAvailable: true,
     mesageLine: "",
@@ -28,7 +28,7 @@ export const daySpecialList = [
   },
   {
     id: 4,
-    name: "I am not avaiable",
+    name: "Summer Charolte (1100 - 1500 gm)",
     price: 2300,
     isAvailable: false,
     mesageLine: "",
