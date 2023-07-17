@@ -10,7 +10,7 @@ export default function Navbar() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const navigate = useNavigate();
 
-  const redirectToHome = () => {
+  const redirectToDeisiredPage = () => {
     navigate("/");
   };
 
@@ -27,27 +27,84 @@ export default function Navbar() {
             Pastry Shop
           </h1>
 
-          <div className=" gap-x-7 justify-center hidden  md:visible md:flex">
-            <h3 className="text-white cursor-pointer  font-[var(--website-font)] text-2xl">
+          <div className="gap-x-7 justify-center  hidden xl:flex ">
+            <h3
+              className="text-white cursor-pointer  font-[var(--website-font)] text-2xl"
+              onClick={() => {
+                navigate("/");
+              }}
+            >
               Home
             </h3>
-            <h3 className="text-white  cursor-pointer  font-[var(--website-font)] text-2xl">
-              Shop
+            <h3
+              className="text-white  cursor-pointer  font-[var(--website-font)] text-2xl"
+              onClick={() => {
+                navigate("/savory", { state: "savory" });
+              }}
+            >
+              Savory
             </h3>
-            <h3 className="text-white  cursor-pointer  font-[var(--website-font)] text-2xl">
+            <h3
+              className="text-white  cursor-pointer  font-[var(--website-font)] text-2xl"
+              onClick={() => {
+                navigate("/pastry", { state: "pastry" });
+              }}
+            >
+              Pastry
+            </h3>
+            <h3
+              className="text-white  cursor-pointer  font-[var(--website-font)] text-2xl"
+              onClick={() => {
+                navigate("/gift-hampers", { state: "gift-hampers" });
+              }}
+            >
+              Gift Hamper
+            </h3>
+            <h3
+              className="text-white  cursor-pointer  font-[var(--website-font)] text-2xl"
+              onClick={() => {
+                navigate("/cookies", { state: "cookies" });
+              }}
+            >
+              Cookies
+            </h3>
+            <h3
+              className="text-white  cursor-pointer  font-[var(--website-font)] text-2xl"
+              onClick={() => {
+                navigate("/cakes", { state: "cakes" });
+              }}
+            >
+              Cakes
+            </h3>
+            <h3
+              className="text-white  cursor-pointer  font-[var(--website-font)] text-2xl"
+              onClick={() => {
+                navigate("/about");
+              }}
+            >
               About Us
             </h3>
-            <h3 className="text-white cursor-pointer  font-[var(--website-font)] text-2xl">
+            <h3
+              className="text-white cursor-pointer  font-[var(--website-font)] text-2xl"
+              onClick={() => {
+                navigate("/contact");
+              }}
+            >
               Contact
             </h3>
           </div>
 
           <div className="flex gap-x-5 ">
             <SearchIcon className="text-white cursor-pointer text-3xl hidden md:block" />
-            <ShoppingCartIcon className="text-white  cursor-pointer text-3xl hidden md:block" />
+            <ShoppingCartIcon
+              className="text-white  cursor-pointer text-3xl hidden md:block"
+              onClick={() => {
+                navigate("/checkout");
+              }}
+            />
             <DehazeIcon
               onClick={() => setIsDrawerOpen(!isDrawerOpen)}
-              className="text-white text-3xl cursor-pointer md:hidden"
+              className="text-white text-3xl cursor-pointer xl:hidden"
             />
 
             {isDrawerOpen && (
